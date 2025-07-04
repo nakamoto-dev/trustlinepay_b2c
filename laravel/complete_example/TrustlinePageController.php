@@ -30,7 +30,7 @@ class TrustlinePageController extends Controller
             'channel' => 'mobile',
             'channel_id' => 1768,
             'payment_service' => 'b2c',
-            'callback_url' => 'https://yourdomain.com/webhook',
+            'callback_url' => 'https://yourdomain.com/api/trustline_callback',  //REPLACE THIS WITH YOUR ACTUAL domain
         ];
 
         $response = Http::withHeaders([
