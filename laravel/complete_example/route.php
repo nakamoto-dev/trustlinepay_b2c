@@ -4,5 +4,5 @@
 
 use App\Http\Controllers\TrustlinePageController;
 
-Route::get('/trustline-demo', [TrustlinePageController::class, 'form']);
-Route::post('/trustline-demo/send', [TrustlinePageController::class, 'send'])->name('trustline.send');
+Route::get('/pay', [TrustlinePageController::class, 'form']);
+Route::post('/pay/initiate', [TrustlinePageController::class, 'send'])->name('trustline.send');
