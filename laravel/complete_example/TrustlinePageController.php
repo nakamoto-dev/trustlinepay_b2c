@@ -23,12 +23,12 @@ class TrustlinePageController extends Controller
         ]);
 
         $payload = [
-            'external_reference' => 'webform-' . uniqid(),
+            'external_reference' => 'Customer001',     //payment reference 
             'amount' => $request->amount,
-            'phone_number' => $request->phone_number,
-            'network_code' => $request->network_code,
+            'phone_number' => $request->phone_number,  //customer number
+            'network_code' => $request->network_code,  //network i.e safaricom
             'channel' => 'mobile',
-            'channel_id' => 1768,
+            'channel_id' => 1768,  //your channel id
             'payment_service' => 'b2c',
             'callback_url' => 'https://yourdomain.com/api/trustline_callback',  //REPLACE THIS WITH YOUR ACTUAL domain
         ];
