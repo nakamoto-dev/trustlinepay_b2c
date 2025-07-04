@@ -11,7 +11,7 @@ class TrustlinePageController extends Controller
 {
     public function form()
     {
-        return view('trustline');
+        return view('pay');  //your pay blade 
     }
 
     public function send(Request $request)
