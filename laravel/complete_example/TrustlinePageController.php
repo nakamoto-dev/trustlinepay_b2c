@@ -11,7 +11,7 @@ class TrustlinePageController extends Controller
 {
     public function form()
     {
-        return view('pay');
+        return view('trustline');
     }
 
     public function send(Request $request)
@@ -33,8 +33,11 @@ class TrustlinePageController extends Controller
             'callback_url' => 'https://yourdomain.com/webhook',
         ];
 
-        $response = Http::withBasicAuth('your_username', 'your_password')
-            ->post('https://trustline.co.ke/api/v1/pay', $payload);
+        $response = Http::withHeaders([
+            'Authorization' => 'Basic MERHRjFNNUNVYU11ZHEydkZMQnE6dWUxdXZ2M0g5TXE1d010NHhLNXZyQ2EwYWJYM0J0Vlg=',
+            'Content-Type' => 'application/json'
+        ])->post('https://trustline.co.ke/api/v1/pay', $payload);
+
 
         return back()->with('response', $response->json());
     }
