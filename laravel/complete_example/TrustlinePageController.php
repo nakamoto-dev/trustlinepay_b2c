@@ -11,7 +11,7 @@ class TrustlinePageController extends Controller
 {
     public function form()
     {
-        return view('trustline-demo');
+        return view('pay');
     }
 
     public function send(Request $request)
