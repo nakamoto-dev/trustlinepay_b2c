@@ -34,7 +34,7 @@ class TrustlinePageController extends Controller
         ];
 
         $response = Http::withHeaders([
-            'Authorization' => 'Basic MERHRjFNNUNVYU11ZHEydkZMQnE6dWUxdXZ2M0g5TXE1d010NHhLNXZyQ2EwYWJYM0J0Vlg=',
+            'Authorization' => 'Basic PASTE_YOUR_TOKEN_HERE',  //REPLACE PASTE_YOUR_TOKEN_HERE WITH TOKEN FROM YOUR ACCOUNT
             'Content-Type' => 'application/json'
         ])->post('https://trustline.co.ke/api/v1/pay', $payload);
 
